@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import RecipeList from "./components/RecipeList"
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RecipeList />
     </div>
-  );
+  )
 }
 
-export default App;
+const sampleRecipes = [
+  {
+    id: 1,
+    name: "Plain Chicken",
+    servings: 3,
+    cookTime: "1:45",
+    instructions:
+      "1. Put salt on Chicken \n2. Put chicken in oven \n3. Eat the chicken"
+  }, 
+  {
+    id: 2,
+    name: "Plain Pork",
+    servings: 5,
+    cookTime: "0:45",
+    instructions:
+      "1. Put paprika on Pork \n2. Put pork in oven \n3. Eat the pork"
+  }
+]
+
+export default App

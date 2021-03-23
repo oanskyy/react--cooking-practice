@@ -1,11 +1,15 @@
 import React, { useEffect } from "react"
 
-function Recipe() {
+// pass in props/variables
+// then use destructuring and move it down
+// function Recipe({name, cookTime, servings, instructions})
+function Recipe(props) {
+  const { name, cookTime, servings, instructions } = props
+
   return (
     <div>
-
       <div>
-        <h3>Chicken Recipe</h3>
+        <h3>{name}</h3>
         <div>
           <button>Edit</button>
           <button>Delete</button>
@@ -14,23 +18,18 @@ function Recipe() {
 
       <div>
         <span>Cook Time:</span>
-        <span>1:45</span>
+        <span>{cookTime}</span>
       </div>
 
       <div>
         <span>Servings:</span>
-        <span>3</span>
+        <span>{servings}</span>
       </div>
 
       <div>
         <span>Instructions</span>
-        <div>
-        1. Put salt on Chicken
-        2. Put chicken in oven 
-        3. Eat the chicken
-        </div>
+        <div>{instructions}</div>
       </div>
-
     </div>
   )
 }

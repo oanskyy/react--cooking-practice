@@ -1,10 +1,11 @@
-import React, { useEffect } from "react"
+import React from "react"
+import IngredientList from "./IngredientList"
 
 // pass in props/variables
 // then use destructuring and move it down
 // function Recipe({name, cookTime, servings, instructions})
 function Recipe(props) {
-  const { name, cookTime, servings, instructions } = props
+  const { name, cookTime, servings, instructions, ingredients } = props
 
   return (
     <div>
@@ -29,6 +30,13 @@ function Recipe(props) {
       <div>
         <span>Instructions</span>
         <div>{instructions}</div>
+      </div>
+
+      <div>
+        <span>Ingredients</span>
+        <div>
+          <IngredientList ingredients={ingredients} />
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,20 @@
+.btn {
+  background: none;
+  /*to remove the default bg color and be able tp style it*/
+  font-size: inherit;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  padding: 5px 20px; 
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn--primary { 
+  background-color: hsl(200, 100%, 50%);
+  color: #fff;
+}
+
+.btn--primary:hover { 
+  background-color: hsl(200, 100%, 40%);
+}

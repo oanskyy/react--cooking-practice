@@ -1,8 +1,9 @@
-import React from "react"
-import Recipe from "./Recipe"
+import React, {useContext} from "react"
+import Recipe from "./Recipe-props+state"
+import {RecipeContext} from './App-context'
 
-function RecipeList(props) {
-  const { recipes, handleRecipeAdd, handleRecipeDelete } = props
+function RecipeList(recipes) {
+const handleRecipeAdd = useContext(RecipeContext)
 
   return (
     <>
@@ -12,7 +13,6 @@ function RecipeList(props) {
             return (
               <Recipe
                 key={recipe.id}
-                handleRecipeDelete={handleRecipeDelete}
                 {...recipe}
               />
             )
